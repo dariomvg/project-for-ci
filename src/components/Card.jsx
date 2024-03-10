@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 const Card = ({item}) => {
   return (
@@ -28,5 +29,16 @@ const Card = ({item}) => {
   </div>
   )
 }
+
+Card.propTypes = {
+  item: PropTypes.shape({
+    image: PropTypes.any.isRequired,
+    name: PropTypes.any.isRequired,
+    species: PropTypes.any.isRequired,
+    origin: PropTypes.shape({
+      name: PropTypes.any.isRequired
+    }).isRequired
+  }).isRequired
+};
 
 export default Card
