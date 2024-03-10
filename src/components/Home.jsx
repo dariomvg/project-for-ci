@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     <>
-      <h1>Datos de Rick y Morty</h1>
+      <h1>Datos de Rick y Morty, hecho con 💗 por Dario</h1>
       <div
         style={{
           display: "flex",
