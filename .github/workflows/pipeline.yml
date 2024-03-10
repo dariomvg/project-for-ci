@@ -2,8 +2,10 @@ name: tests
 
 on:
     push:
-      branches:
-        - master
+      branches: [master]
+    pull_request: 
+        branches: [master]
+        types: [opened, synchronize ]
 
 jobs:
     deploy:
@@ -21,3 +23,9 @@ jobs:
               run: npm run lint    
             - name: run build
               run: npm run build       
+            - name: Deploy to GitHub Pages
+              uses: Cecilapp/GitHub-Pages-deploy@v3
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            
