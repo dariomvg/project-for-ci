@@ -23,6 +23,8 @@ jobs:
               run: npm run lint    
             - name: run build
               run: npm run build       
-            - name: Deploy React app to Github pages
-              uses: tanwanimohit/deploy-react-to-ghpages@v1.0
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                folder: dist
             
