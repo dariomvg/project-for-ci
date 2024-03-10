@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Menu />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/project-for-ci" element={<Home />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
